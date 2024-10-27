@@ -34,7 +34,7 @@ CLASSIFICATION_EPOCHS = 80
 # similarity_loss = losses.TripletMarginLoss(margin=MARGIN)
 # similarity_optim = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
 # miner = miners.TripletMarginMiner(margin=MARGIN, type_of_triplets="semihard")
-similarity_loss = tfa.losses.TripletSemiHardLoss()
+similarity_loss = tfa.losses.TripletSemiHardLoss(margin=MARGIN)
 similarity_optim = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
 
 classification_loss = tf.keras.losses.BinaryCrossentropy()
